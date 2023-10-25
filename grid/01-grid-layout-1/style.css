@@ -4,6 +4,8 @@ body, html {
 }
 
 .container {
+  display: grid;
+  grid-template: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% / 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   text-align: center;
   height: 100%;
   padding: 16px;
@@ -20,18 +22,26 @@ body, html {
 }
 
 .header {
+  grid-column-start: 1;
+  grid-column-end: 11;
   background-color: #FFDE22;
 }
 
 .sidebar {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 2 / 10;
   background-color: #FF7755;
 }
 
 .nav {
+  grid-column: 4 / 11;
   background-color: #00DDFF;
 }
 
 .article {
+  grid-column: 4 / 11;
+  grid-row: 3 / 10;
   background-color: #bccbde;
 }
 
@@ -43,5 +53,6 @@ body, html {
 }
 
 .footer {
+  grid-column: 1 / 11;
   background-color: #393f4d;
 }
